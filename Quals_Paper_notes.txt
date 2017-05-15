@@ -1,0 +1,90 @@
+NOTES FOR QUALS PAPER:
+
+modify figure one to add bar graphs of confidences in time. This will illustrate how the confidences become "peakier" with time. The goal is to make sure that the mode selected and the subsequent control of the robot in that mode, will indeed result in a peakier distribution. A unqiue maximum is not necessarily the case. Wiull depnds on the confidence function and the spatial goal distribution
+
+Integrate introduction and related works. 
+
+Talk about the components of the algorithm and describe each component using a single line. 
+
+Maybe skip the blending paradigm altogether?
+
+1 to 2 paragraphs for describing the experiment. 
+
+
+
+Presentation Outline 
+
+Slide 1:
+
+Overview of Assistive Robotics:
+Possibly similar to slide 1 of CASE presentation
+
+Slide 2:
+Kinds of shared control:
+Block Diagram of how user control and robot control is "combined" to produce final control command
+
+Blocks: uh, uf, "combination algorithm", paramterization for combination based on human intent (intent inference informing the combination algo block), senosry modalities, final control commands, feedback. 
+
+Highlight the intent inference part and convey that this work focuses primarily on intent inference and wyas to improve it. 
+
+Why is intent inference hard? modal control. low bandwidth signals, low dimensional signals, high variability, "obvious methods" such as speech is not robust in real environments, 
+
+Why is intent inference important? Earlier the intent is inferred, the faster the assistance can be provided. 
+
+
+Slide 3 (Needs some research on this. )
+Intent inference: Related work:
+
+Intent communication (via click interfaces, laser pointers, speech interfaces) vs. Intent inference Cognitive scientists, Model based, Cue Based, Assistive domain, Mental models, intent inference via perception. 
+
+Slide 4:
+Slide in which different terms such as inverse legibility, disambiguation, information content etc is presented. Anchor in on Figure 1. 
+
+Supplement the current Figure 1 with "bar graphs" confidences. Two sets of bar graphs. one for dimension x, one for dimension y. Tlka briefly about how there can be a metric which gives an idea of which one of the two goals the user is going for? Motions are not just random,m but results of planning, that is they are expressing an underlying intent. 
+
+By demonstraing how the bargraphs will be different, describe why certain "dimensions" will have "more" information regarding the user's intent upon motion and thereby helps in "disambiguating" between the goals. Fro the robot's perspective not all kinds of "signals" or motion cues are legible....and legibility in this context is a measure of how intent expressive this is. 
+
+State the problem we ar etrying to address by involving words such as disambiguation, legibility. And by identifying the dimensions that would maximize the disambiguation capability, we are in a way trying to "force" the user operate the robot in a mode which will elicit maximum information regarding the user's intent. 
+
+Slide 4b?
+
+Help Me help you, people helping robots helping people. Another way of looking at this is that there are might be certain kinds of signals or control commands that the user can use to "nudge" the robot to provide the right kind of assistance. 
+
+Slide 5a,b,c,d: Mathematical Formalism beginning. 
+
+Again ground this in an example. Have 2 or 3 different sets of confidences, each representing a dimension. Introduce notation. g, c, k, m, dk, dm
+
+Confidences - Subsection. Its actually a hyper surface! but we can look at c only as a function of each dimension. then a bar graph representation will make sense. 
+
+Emphasize the heuristic aspect of the metric and how I decided to "design" what aspects should infomr the metric. 
+
+Talk about the Design of the disambiguation metric. 
+Every component should be anchored in the picture
+With gradient based ocmponents have mutliple bar graphs and show
+
+Slide 6:
+Experimental Study:
+
+Simulation based experiments:
+1. Impact of choice of confidence functions
+2. The robustness of the assumptions. (anchor this in a picture)
+
+Slide 6b:
+Hardware study:
+
+Describe experimental set up and protocol. With pictures:
+Describe interfaces: with pictures and table
+
+Describe the metrics and population and emphaszie the pilot study part of it!
+
+Slide 7:
+DEsribe the plot and interpret the results
+
+Slide 8:
+Current limitations:
+
+Slide 9: Current implementation: 
+
+ODE for confidence so that they have memory?
+
+
