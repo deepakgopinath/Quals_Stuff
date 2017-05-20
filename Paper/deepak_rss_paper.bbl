@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{3}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -17,18 +17,10 @@ Stephen Monsell.
 \newblock \emph{Trends in cognitive sciences}, 7\penalty0 (3):\penalty0
   134--140, 2003.
 
-\bibitem[Tsui et~al.(2008)Tsui, Yanco, Kontak, and
-  Beliveau]{tsui2008development}
-Katherine Tsui, Holly Yanco, David Kontak, and Linda Beliveau.
-\newblock Development and evaluation of a flexible interface for a wheelchair
-  mounted robotic arm.
-\newblock In \emph{Proceedings of the 3rd ACM/IEEE International Conference on
-  Human Robot Interaction}, pages 105--112. ACM, 2008.
-
 \bibitem[Volosyak et~al.(2005)Volosyak, Ivlev, and
   Graser]{volosyak2005rehabilitation}
 Ivan Volosyak, Oleg Ivlev, and Axel Graser.
-\newblock Rehabilitation robot friend ii-the general concept and current
+\newblock Rehabilitation robot {FRIEND II}-the general concept and current
   implementation.
 \newblock In \emph{9th International Conference on Rehabilitation Robotics
   (ICORR), 2005}, pages 540--544. IEEE, 2005.

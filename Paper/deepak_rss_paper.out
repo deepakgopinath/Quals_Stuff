@@ -1,6 +1,6 @@
 \BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
 \BOOKMARK [1][-]{section.2}{ALGORITHM DESIGN}{}% 2
-\BOOKMARK [2][-]{subsubsection.2.0.1}{Separation in confidences}{section.2}% 3
+\BOOKMARK [2][-]{subsubsection.2.0.1}{Separation of confidences}{section.2}% 3
 \BOOKMARK [3][-]{subsubsection.2.0.2}{Max of confidences}{subsubsection.2.0.1}% 4
 \BOOKMARK [3][-]{subsubsection.2.0.3}{Difference between largest confidences}{subsubsection.2.0.1}% 5
 \BOOKMARK [3][-]{subsubsection.2.0.4}{Gradients}{subsubsection.2.0.1}% 6

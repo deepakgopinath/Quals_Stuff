@@ -22,7 +22,7 @@
 \newcommand{\argmax}{\arg\!\max}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \pdfinfo{
-   /Author (Deepak Gopinath, Brenna D. Argall)
+   /Author (Deepak Gopinath, Mechanical Engineering, Northwestern University)
    /Title  (Mode Switch Assistance to Human Intent Disambiguation)
    /CreationDate (January 31 2017)
    /Subject (Robots)
@@ -33,7 +33,7 @@
 
 % paper title
 \title{Mode Switch Assistance to\\Maximize Human Intent Disambiguation}
-\author{Deepak Gopinath and Brenna D. Argall}
+\author{Deepak Gopinath, Department of Mechanical Engineering, Northwestern University}
 % You will get a Paper-ID when submitting a pdf file to the conference system
 %\author{Deepak Gopinath and Brenna D. Argall}
 
@@ -104,15 +104,15 @@
 
 Assistive and rehabilitation devices such as powered wheelchairs, robotic arms and myoelectric prostheses play an important role in the lives of people with motor impairments. These devices help to increase their ability to perform activities of daily lives and reduce their dependence on caretakers.
 
-The common paradigm for control of such high-dimensional devices has the human directly control the motion via a control interface.  These interfaces (for example,  a switch-based head array and Sip-N-Puff) are lower in dimensionality and bandwidth and due to this dimensionality mismatch, these interfaces operate in \textit{modes} which correspond to different partitions of the control space. In order to have full control of the robot the user will have to switch between modes and this is known as \textit{mode switching}~\cite{tsui2008development}. 
+The common paradigm for control of such high-dimensional devices has the human directly control the motion via a control interface.  These interfaces (for example,  a switch-based head array and Sip-N-Puff) are lower in dimensionality and bandwidth and due to this dimensionality mismatch, these interfaces operate in \textit{modes} which correspond to different partitions of the control space. In order to have full control of the robot the user will have to switch between modes and this is known as \textit{mode switching}. 
 %Thus, a greater need for sophisticated assistive devices is paired with a diminishing ability to control their additional complexity. The confounding factor is that the more severe a person's motor impairment, the more limited are the control interfaces available to them to operate.
-It has been established that mode switching adds to the cognitive burden and results in degradation of task performance~\cite{monsell2003task}.  Furthermore, the more severe a person's impairment, the more limited are the control interfaces available for use.
+It has been established that mode switching adds to the cognitive burden and results in a degradation of task performance~\cite{monsell2003task}.  Furthermore, the more severe a person's impairment, the more limited are the control interfaces available for use.
 
- The introduction of \textit{shared autonomy}~\cite{volosyak2005rehabilitation} to these systems helps to address these issues by letting the system take responsibility to some extent.
+ The introduction of \textit{shared autonomy}~\cite{volosyak2005rehabilitation} to these systems helps to address these issues by letting the system take over control to some extent.
 % thereby reducing the human effort in achieving a goal. 
 For any assistive autonomy, the system typically needs an idea of what it is the human is trying to do---either by explicit indication from the user of the task or goal, or by inferring the human's intent from their control signals and/or sensor data. In our work, we develop an assistance paradigm that helps with intent inference, by selecting the control mode in which robot motion will \textit{maximally disambiguate} human intent. 
-%This is advantageous because, the faster the autonomy is able to disambiguate intent, the earlier the robot is able to provide autonomy assistance---leading ideally to fewer mode switches and less burdensome executions. 
-In many shared-control systems, the assistance provided by the robot is regulated by a confidence metric that is the system's confidence in its own estimate of human intent. 
+%%This is advantageous because, the faster the autonomy is able to disambiguate intent, the earlier the robot is able to provide autonomy assistance---leading ideally to fewer mode switches and less burdensome executions. 
+%In many shared-control systems, the assistance provided by the robot is regulated by a confidence metric that is the system's confidence in its own estimate of human intent. 
 %This can also be interpreted as a \textit{belief} over goals. 
 %the robot's ability to estimate user intent confidently and accurately. Therefore in the literature to date, the factor dictating how much control lies with the robot versus with the human is usually a function of a confidence metric. This metric is
 
@@ -184,15 +184,15 @@ In the example illustrated in Figure~\ref{DE}, a human control command issued al
 
 Let $\mathcal{G}$ be the set of all candidate goals in the scene with $n_g = \vert\mathcal{G}\vert$.
 %and let $g^{i}$ refer to the $i^{th}$ goal where $i \in [1,2,\dots,n_g]$. 
-The set of goals results in an associated set of confidences denoted as $\mathcal{C}$.
+Every goal $g \in \mathcal{G}$ has an associated confidence $c_g$ which is a measure of the robot's estimate that $g$ is the user's intended goal. The set of all confidences is denoted as $\mathcal{C}$.
 %, where $c^{i}$ refers to the individual confidence associated with goal $g^{i}$. 
 Let $\mathcal{K}$ be the control space in which the robot operates and  let $\mathcal{M}$ refer to the set of all modes that $\mathcal{K}$ is partitioned into.
 \begin{wrapfigure}[8]{R}{0.26\textwidth}
 	% 	\begin{center}
-	\vspace{-0.97cm}
-	\includegraphics[width=0.26\textwidth]{./figures/DE.png}
-	% 	\end{center}
 	\vspace{-0.9cm}
+	\includegraphics[width=0.26\textwidth]{./figures/DE_NEW.png}
+	% 	\end{center}
+	\vspace{-0.8cm}
 	\caption{Illustration of goal disambiguation along various control dimensions. A and B indicate two point goal locations.}
 	\label{DE}
 \end{wrapfigure}
@@ -204,16 +204,16 @@ Let $\mathcal{K}$ be the control space in which the robot operates and  let $\ma
 %Another quantity of interest is the gradient of individual goal confidences along the different control dimensions. More specifically, $\frac{\partial c}{\partial k}$ captures the rate of change of the confidence $c$ along control dimension $k$. Furthermore, since the confidence function, in general, can assume drastically different values upon moving in positive and negative directions along a  given control dimension, the positive and negative gradients are explicitly denoted as $\frac{\partial c}{\partial k}^{+}$ and $\frac{\partial c}{\partial k}^{-}$ respectively. The formalism developed in Section~\ref{DM} is agnostic to a particular form of confidence function. Additionally, an analytical closed-form expression for the gradient might not always be available as the confidence functions need not be continuous and differentiable. Even when available, due to the complexity of the confidence measure such an expression might be expensive to compute. Therefore in our work, the gradient is numerically approximated.
 %%Lastly, we define a \textit{disambiguation} metric $D_{k_j}\in \mathbb{R}\; \forall \;k_j \in \mathcal{K}$ and is a function of the individual goal confidences $c_i$ and $\frac{\partial c_i}{\partial k_j}$\footnote{For the rest of the paper $\frac{\partial c_i}{\partial k_j}$ will be denoted as $ \dot{c}_{ij}$}. 
 
-We define a \textit{disambiguation} metric, $D_{k}\in \mathbb{R}$ for each control dimension $k \in \mathcal{K}$, which is a function of $c$ and $\frac{\partial c}{\partial k}$, where $c \in \mathcal{C}$. Lastly, we define a disambiguation metric $D_m \in \mathbb{R}$ for each control mode $m \in \mathcal{M}$.
-$D_m$ is a measure of how legible the user commands would be if the user were to control the robot in mode $m$. 
-The confidence function used in this work tries to capture the ``directedness'' of the human control commands and is given by 
-%\begin{equation*}\label{EQ2}
-%c({\boldsymbol{x},\boldsymbol{x_g}, \boldsymbol{u}_{h}}) = \boldsymbol{u}_h\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})
+We define a \textit{disambiguation} metric, $D_{k}\in \mathbb{R}$ for each control dimension $k \in \mathcal{K}$, which is a function of $c$ and $\frac{\partial c}{\partial x_k}$, where $c \in \mathcal{C}$ and $x_k$ is the component of robot's position along control dimension $k$\footnote{The subscript $k$ will be dropped from $x_k$ for brevity in notation}. Lastly, we define a disambiguation metric $\boldsymbol{D}_m \in \mathbb{R}$ for each control mode $m \in \mathcal{M}$.
+$\boldsymbol{D}_m$ is a measure of how legible the user commands would be if the user were to control the robot in mode $m$. 
+%The confidence function used in this work tries to capture the ``directedness'' of the human control commands and is given by 
+%%\begin{equation*}\label{EQ2}
+%%c({\boldsymbol{x},\boldsymbol{x_g}, \boldsymbol{u}_{h}}) = \boldsymbol{u}_h\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})
+%%\end{equation*}
+%\begin{equation*}\label{E1}
+%c_g(\boldsymbol{x}, \boldsymbol{u}_h, \boldsymbol{u}_{r,g}) = \boldsymbol{u}_{h}^{trans}\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})^{trans} + \boldsymbol{u}_h^{rot}\cdot\boldsymbol{u}_{r,g}^{(rot)}
 %\end{equation*}
-\begin{equation*}\label{E1}
-c_g(\boldsymbol{x}, \boldsymbol{u}_h, \boldsymbol{u}_{r,g}) = \boldsymbol{u}_{h}^{trans}\cdot(\boldsymbol{x}_{g} - \boldsymbol{x})^{trans} + \boldsymbol{u}_h^{rot}\cdot\boldsymbol{u}_{r,g}^{(rot)}
-\end{equation*}
-where $\boldsymbol{u}_h$ is the human control command,  $\boldsymbol{x}$ is the current position of the robot, $\boldsymbol{x}_{g}$ is the location of goal $g$, $trans$ refers to the translational and $rot$ refers to the rotational parts of the entire control space. 
+%where $\boldsymbol{u}_h$ is the human control command,  $\boldsymbol{x}$ is the current position of the robot, $\boldsymbol{x}_{g}$ is the location of goal $g$, $trans$ refers to the translational and $rot$ refers to the rotational parts of the entire control space. 
 %\subsection{Confidence function}\label{CF}
 %The choice of confidence function is entirely up to the system designer and numerous options exist. An example of a simple distance-based confidence function is
 %\begin{equation*}\label{EQ1}
@@ -234,25 +234,24 @@ where $\boldsymbol{u}_h$ is the human control command,  $\boldsymbol{x}$ is the 
 %\end{equation*}
 %where $\mathcal{F}_{r}$ is the set of all control behaviors corresponding to different tasks. The algorithm proposed in this paper requires that the confidence measures varies as a function of $\boldsymbol{x}$, so that $\frac{\partial c}{\partial k}$ is well-defined and exists. The specific form of the confidence function and the autonomous robot policy generator will be discussed in Section~\ref{BP}.
 %\subsection{Disambiguation metric}\label{DM}
-Let the component of $\boldsymbol{x}$ along control dimension $k$ be denoted as $x$. 
 %Figure~\ref{DM_FIG} is an illustrative example which shows how goal confidences can vary as a function of position along a control dimension. 
 %
 %The disambiguation metric $D_{k}$ encodes different aspects of how the goal confidences change upon moving along control dimension $k$. 
 %A proper design of $D_{k}$ should take into account both immediate as well as long term benefits of moving in $k$ and combine them into one metric. 
 We identify four important considerations to  inform the design of $D_{k}$.
 
-\subsubsection{Separation in confidences}
-A good measure for evaluating the confidence disambiguation potential of a control dimension is to compute the \textit{separation}, $\Lambda_{k}$, in goal confidences. 
+\subsubsection{Separation of confidences}
+A good measure for evaluating the confidence disambiguation potential of a control dimension is to compute the \textit{separation}, $\Lambda_{k}$, in goal confidences,
 %At any point in space this can be computed as the \textit{sum of pairwise distances} between the $n_g$ confidences.
 % Since we are interested in the separation after a small change in position (due to user-initiated robot motion), we can sample the confidence function at $x\pm\Delta x$ and use the sampled values to compute $\Lambda_{k}$, where $\Delta x$ is a small change along the control dimension. Thus,
 \begin{equation*}
 \Lambda_{k} = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\lvert c^{p}_{\delta_x} - c^{q}_{\delta_x}\rvert
 \end{equation*}
-where $\delta_x$ indicates $x+\Delta x$ or $x-\Delta x$ depending on the direction of perturbation and $\lvert\cdot\rvert$ denotes the absolute value. 
+where $\delta_x$ indicates $x+\Delta x$ or $x-\Delta x$ depending on the direction of perturbation, and $\lvert\cdot\rvert$ denotes the absolute value. 
 \subsubsection{Max of confidences}
-The maximum of the goal confidences is a good measure of the system's overall certainty in accurately estimating human intent. 
+The maximum of the confidences ($\Gamma_{k}$) is a good measure of the system's overall certainty in accurately estimating human intent. 
 %A higher maximum implies that the robot has an even better idea of and is fairly sure of what the human is trying to do. 
-The max ($\Gamma_{k}$) is computed as
+This is computed as
 \begin{equation*}
 %M^{\pm}_{k^j} = \sum_{p = 1}^{n_g}c^{p}_{x_{j}^{\delta\pm}}.
 \Gamma_{k} =\max\limits_{1 \leq i \leq n_g}c^{i}_{\delta_x}
@@ -271,7 +270,7 @@ This difference ($\Delta_{k}$) is computed as
 \Delta_{k} = \max(\mathcal{C}) - \max(\mathcal{C} \setminus {\max(\mathcal{C})})
 \end{equation*}
 \subsubsection{Gradients}
-The propensity for change and information gain upon the continuation of motion along control dimension $k$ is encoded in the spread of gradients, $\Upsilon_{k}$ which is computed as  $\frac{\partial c}{\partial k}\; \forall\; c\in \mathcal{C}$. 
+The propensity for change and information gain upon the continuation of motion along control dimension $k$ is encoded in the spread of gradients $\frac{\partial c}{\partial x}\; \forall\; c\in \mathcal{C}$. The spread of the gradients ($\Upsilon_{k}$) is computed as  
 %The greater the difference between the gradients of individual confidences $c$, the greater will they deviate from each other. 
 % Instead of using closed-form analytical gradients, we approximate the gradients using forward and backward differences. Therefore, 
 %\begin{equation*}
@@ -280,7 +279,7 @@ The propensity for change and information gain upon the continuation of motion a
 %where $c_x$ denotes the confidence at location $x$.
 %In order to quantify the ``spread'' of gradients we define a quantity $\Upsilon_{k}$ which is computed as 
 \begin{equation*}
-\Upsilon_{k} = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\Big \lvert\frac{\partial c^p}{\partial k} - \frac{\partial c^q}{\partial k}\Big \rvert
+\Upsilon_{k} = \sum_{p=1}^{n_g}\sum_{q=p}^{n_g}\Big \lvert\frac{\partial c^p}{\partial x} - \frac{\partial c^q}{\partial x}\Big \rvert
 \end{equation*}
 
 \subsubsection*{Putting it all together}
@@ -288,18 +287,18 @@ $\Lambda_{k}$, $\Gamma_{k}$, $\Delta_{k}$ and $\Upsilon_{k}$ are then combined t
 \begin{equation*}\label{DK}
 D_{k} = \boldsymbol{w}\cdot(\Lambda_{k}\cdot \Gamma_{k}\cdot \Delta_{k}) + (1 - \boldsymbol{w})\cdot \Upsilon_{k}
 \end{equation*}
-where $\boldsymbol{w}$ is a user-defined weight.
+where $\boldsymbol{w}$ is a task-specific weight set by the system-designer.
 %Equation~\ref{DK} actually is computed twice, once in each of the positive ($\delta_x = x + \Delta x$) and negative directions ($\delta_x = x - \Delta x$), and the results are then summed. 
 %Once the disambiguation metric $D_k$ for each control dimension $k$ is computed, 
-The disambiguation metric $D_m$ for control mode m is calculated as $D_m = \sum_{j} D_{k} \forall \;k\in m$.
+The disambiguation metric $\boldsymbol{D}_m$ for control mode $m$ is calculated as $\boldsymbol{D}_m = \sum_{j} D_{j} \;\forall \;j\in m$.
 %\begin{equation*}
-%D_m = \sum_{j} D_{k} \; \forall \; k \in m
+%D_m = \sum_{j} \boldsymbol{D}_{k} \; \forall \; k \in m
 %\end{equation*}
 The control dimension with highest disambiguation capability $\boldsymbol{k}^*$ is given by $\argmax_k D_{k}$
 %\begin{equation*}
 %\boldsymbol{k}^* = \argmax_k D_{k}
 %\end{equation*}
- and the mode with highest disambiguation capability $\boldsymbol{m}^{*}$ is given by $\argmax_m D_m$.
+ and the mode with highest disambiguation capability $\boldsymbol{m}^{*}$ is given by $\argmax_m \boldsymbol{D}_m$.
 %\begin{equation*}
 %\boldsymbol{m}^* = \argmax_m D_m
 %\end{equation*}
@@ -360,17 +359,18 @@ Disambiguation mode $\boldsymbol{m}^{*}$ is the mode that the algorithm chooses 
 \section{EXPERIMENTS AND RESULTS} \label{EV}
 \begin{figure}[t]
 	\centering
-	\includegraphics[width = 0.7\hsize,center]{./figures/DATA_PLOT.png}
-	\vspace{-0.7cm}
-	\caption{Comparison of Disambiguation and Manual paradigms.}
+	\includegraphics[width = 1.0\hsize,center]{./figures/MODE_2.png}
+	\vspace{-0.4cm}
+	\caption{Comparison of \textit{Disambiguation} and \textit{Manual} paradigms.}
 	\label{DATAPLOT}
-	\vspace{-0.5cm}
+%	\vspace{-0.5cm}
 \end{figure}
-The experiments were performed using the MICO robotic arm (Kinova Robotics, Canada).
-Three kinds of mode switching paradigms were evaluated:
-\noindent\underline{\textit{Manual}} -- User manually performs all mode switches, \noindent\underline{\textit{Disambiguation}} -- The disambiguation system is activated right at the beginning of a trial and the trial starts in $\boldsymbol{m}^*$,  \noindent\underline{\textit{On Demand}} -- User can request a mode switch assistance at any time during task execution.
 
-Three different reaching tasks, namely 1) Simple Reaching (\textit{R}) 2) Reaching with Same Grasp (\textit{RsG}) and 3) Reaching with Different Grasp (\textit{RdG}) with different goal configurations were developed for our pilot study.
+The pilot experiment was performed using the MICO robotic arm (Kinova Robotics, Canada).
+Three kinds of mode switching paradigms were evaluated:
+\noindent\underline{\textit{Manual}} -- User manually performs all mode switches. \noindent\underline{\textit{Disambiguation}} -- The disambiguation system is activated right at the beginning of a trial and the trial starts in $\boldsymbol{m}^*$.  \noindent\underline{\textit{On Demand}} -- User can request mode switch assistance at any time during task execution.
+
+Three different reaching tasks, namely (1) Simple Reaching (\textit{R}) (2) Reaching with Same Grasp (\textit{RsG}) and (3) Reaching with Different Grasp (\textit{RdG}) with different goal configurations were developed for our pilot study.
 %
 %\noindent\underline{\textit{Simple Reaching (R)} }: The user operates the robotic arm using both control interfaces to perform simple reaching motions to three different goal locations. This is a training task and the primary purpose is to get the user accustomed to the operation of the control interfaces, the underlying blending based assistance and the experiment protocol. 
 %
@@ -378,6 +378,10 @@ Three different reaching tasks, namely 1) Simple Reaching (\textit{R}) 2) Reachi
 %
 %\noindent\underline{\textit{Reaching with Different Grasp (RdG)}}: This is a more difficult task that \textit{RsG} in which the user operates the robot to perform reaching motions to one of five objects in the scene with different grasp orientations.
 Analysis was performed only on data collected from \textit{RsG} and \textit{RdG}. The human control command $\boldsymbol{u}_h$ was captured using two different control interfaces: 2-axis joystick and a head array.
+Four subjects participated in the pilot study, (3 male, 1 female), and all were lab members.  
+%Each task consisted of two phases. In phase I, each user performed the task using both interfaces under \textit{Manual} and \textit{Disambiguation} paradigms. In phase II, the user performed the same task using both interfaces using the \textit{on-demand} paradigm.
+Task completion times and the number of mode switches were evaluated during the pilot study. 
+
 %
 %
 %\subsection{Control Interfaces}
@@ -466,13 +470,33 @@ Analysis was performed only on data collected from \textit{RsG} and \textit{RdG}
 % Moreover, the algorithm can be used to pre-compute the best modes ahead of time and can be used as a look-up table during task execution for automated mode switching. A single mode switch assistance provided at the beginning of the trial might not be enough to and therefore automated mode switching during task execution will be critical to improve task performance especially for more limited interfaces. 
 % 
 %\section{PILOT STUDY}\label{EXP}
-We investigated the use and utility of our disambiguation approach in a pilot study. Four subjects participated in the pilot study, (3 male, 1 female), and all were lab members.  
-%Each task consisted of two phases. In phase I, each user performed the task using both interfaces under \textit{Manual} and \textit{Disambiguation} paradigms. In phase II, the user performed the same task using both interfaces using the \textit{on-demand} paradigm.
-Task completion times and the number of mode switches were evaluated during the pilot study. 
+%We investigated the use and utility of our disambiguation approach in a pilot study. 
 
-An improvement in task performance in terms of a decrease in the number of mode switches was observed across all task--interface combinations. 
+An improvement in task performance in terms of a decrease in the number of mode switches was observed across all task-interface combinations. 
 %Statistical significance in Figure~\ref{DATAPLOT} is determined by two-sided Wilcoxon Rank-Sum Test, where (*) indicates $p < 0.05$.
-Figure~\ref{DATAPLOT} (top row) reveals the general trend of a decrease in the number of mode switches. The difference in the number of mode switches was statistically significant only when using the joystick. In Figure~\ref{DATAPLOT} (bottom row), a decrease in task completion times during \textit{Disambiguation} paradigm was observed in all but one case: \textit{RdG}--headarray combination. However, these differences were not statistically significant for any of the task-interface combinations. Although the subjects demonstrated a wide range of disambiguation request behaviors, we were able to observe a general trend of an increase in disambiguation requests with an increase in task difficulty.
+Figure~\ref{DATAPLOT} reveals the general trend of a decrease in the number of mode switches. The difference in the number of mode switches was statistically significant only when using the joystick.
+% In Figure~\ref{DATAPLOT} (bottom row), a decrease in task completion times during \textit{Disambiguation} paradigm was observed in all but one case: \textit{RdG}--headarray combination. However, these differences were not statistically significant for any of the task-interface combinations. Although the subjects demonstrated a wide range of disambiguation request behaviors, we were able to observe a general trend of an increase in disambiguation requests with an increase in task difficulty.
+
+In order to quantify the impact of different confidence functions on the computation of $\boldsymbol{k^*}$ and $\boldsymbol{m^*}$, simulations were performed in which $\boldsymbol{k^*}$ was computed at 2000 uniformly sampled points in the workspace of the robot. Two different confidence functions were used: Proximity-based (\textbf{C1}) and Directedness-based (\textbf{C2}). The goal configuration was same as that in \textit{RsG} in which the goal positions were spread out maximally along $x$ and $z$ axes. Intuitively the robot will be able to infer the human's intent if the human control command is along the $x$ or $z$ axes. Table~\ref{HMD} reports the number of times the algorithm picked each of the three control dimensions, for each confidence function.  
+\textbf{C1} often was unable to capture the human intent properly. Furthermore, \textbf{C1} had ``null'' spaces where all confidences were identically equal to zero and therefore disambiguation was not possible. By contrast, with \textbf{C2} the algorithm identified $x$ as the preferred dimension 1711 out of 2000 samples, and $z$ in 196 of the remaining 289 samples, which indicates that the confidence function along with our algorithm was able to select the disambiguating dimensions over $95\%$ of the time. 
+%The algorithm picked $y$ only when the robot directly in front of a goal. 	
+\begin{table}[t]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multicolumn{5}{|c|}{Best control dimension distribution} \\
+		\hline
+		\textbf{Confidence Function} & \textbf{X} & \textbf{Y} & \textbf{Z} & \textbf{NULL} \\ \hline
+		
+		\textbf{C1} & $579$ & $615$ & $446$ & $360$ \\ \hline
+		\textbf{C2} & $1711$ & $93$ & $196$ & $0$\\ \hline
+		
+	\end{tabular}
+	\vspace{.2cm}
+	\caption{Best control dimension distribution for two different confidence functions.} 
+	\label{HMD}
+	\vspace{-.5cm}
+\end{table}
 \section{DISCUSSION AND CONCLUSION}
 %Currently the algorithm assumes that at any point in the workspace all the goals in the scene are equally likely. However, in the real scenario, the user usually has an idea of what goal s/he is going for. Therefore,
  In future versions of the algorithm, it might be useful to bias the computation of the ``best control mode'' by looking for cues in the past history of the robot trajectory and control commands such that the control mode chosen will always be useful for the human in reaching the goal s/he has in mind. This will also likely improve the robustness and result in higher user acceptance. 

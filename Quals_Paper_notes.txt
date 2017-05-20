@@ -85,6 +85,182 @@ Current limitations:
 
 Slide 9: Current implementation: 
 
-ODE for confidence so that they have memory?
+ODE for confidence so that they have memory
 
+
+
+**********************************************************************
+Higher level:
+
+Less in the beginning, more on results
+
+Don't have empty slides for the most part. 
+More pop
+titles should be flipped for all slides. 
+
+Notes:
+
+Add an outline slide...?
+
+Divide into sections...
+Slide 1:
+citation pictures
+
+***
+Proper citations for pictures. 
+
+
+
+Slide 2: 
+
+Present the interfaces separately....Easier to hardest. Put names under the interfaces. Replace 7DOF with 6+1DOF. Indicating one for gripper. Start to consolidate the arm example. 
+
+Slide 3:
+
+Slide 4:
+Put it at the end for back up. Use some other words and not "intersection"
+
+Maybe add sentence regarding how "modes" can also refer to predefined motion primitive etc. 
+
+
+Slide 5:
+
+Talk about dimensionality mismatch and why control space needs to be partitioned. Describe and establish what modes using example. 
+have sip n' puff partitioning. then motivate the modal control hard
+videos from old study...showing modal control is hard.
+
+Slide 6:
+Not needed to talk about shared autonomy explicitly a lot. 
+What is intent? Describe. 
+No wheel chair talk. remove cliparts citation
+Change robot brain picture to a "computer picture. "
+
+
+SLide 7:
+
+Align the text the properly. Captilization. 
+Explicit and implicit. instead of touchpads, GUI
+
+Good. Look into citations properly and understand the content in a decent way. Maybe talk about "dominant" approaches. 
+
+Slide 8:
+
+Remove bar graphs: Just talk about it. 
+
+More legiblie legibility.
+
+Have the word inverse legibility. Maybe even have legibility (usual cntext, robot to human. )
+Here inverse legibility - human to robot. 
+
+have the bullet come up first and then the picture. Explain the picture. 
+ Inverse legibility. 
+
+Slide 9
+
+Break down sentences. 
+Present each "section" of the project separately. standard the "bold/italics" coloring scheme
+
+Slide 10:
+
+Clear cut definition about belief. Talk about this as an alternate interprestation as a separate point. Don't make it confusing. Carefully choose words. 
+Ordering of functions before second point. 
+Quantifying measure systems estimate. 
+Different choice of words. Maybe When the equations are shown supplement it with diagrams. 
+don';t use maximal twice. 
+
+Slide 10b:
+
+Describe how the intent inference is used in the assistance system. This will make sure that the results are interpreted right.
+
+That is IF the intent inference got better, the assistance will be more (that is robot will bear more responsibility) in task completion and as a result the metrics will improve...
+Slide 11:
+
+Presentation: Use words. Goals: Confidences: etc...
+Get rid of confidence equation
+Remove the word Let
+
+
+
+Slide 12:
+animate and pop up. 
+surface plots for confidences...And then slice it....Then project it. 
+
+sLide 13:
+Change notation for Dm. and gradient. Try 3d Pictures?
+ Clkarify that Dm is calculted using Dk. tehrefore Algorithm is to compute dk. 
+
+ Explain how the dm for modes are computed using Dk...Explain that the algorithm is to compute Dk...then Dm is easily derived from Dk. 
+
+slide 14:
+
+Grand equations.
+No braces: using I bars. Flip the equations and sentences. 
+
+Use the word "components"
+
+slide 15:
+Use "max" on the "y-axis"...Hightlight the "bar" on top. no one saw it. 
+
+slide 18:
+Box both w's . How is w defined. 
+Describe what dk and Dm was again....
+
+Label the equations: Remind people about control dimension, and modes
+slide 19:
+
+highlight pictures:
+highlight goals. 
+Have a "easiest" to hard indicator at the bottom.
+bakcup slide for subjective preferences - if needed. 
+
+
+slide 20:
+no need for velocity control...using xyz etc. maybe talk about subjective preferences?
+present 
+why disamb in the bgeinning? why only in the bgeinning. 
+Phase 1:
+	Manual
+	Disamb 
+Phase 2:
+	on Demand
+
+Picture graph for paradigms...
+
+Phase 1: 
+
+Phase 2: block diagram
+
+Slide 21:
+
+Present each graph separately. Descibe the plots..X and Y axis. Put legend for tasks in the slide.  
+Describ the plots. Lput the labels. 
+Slide 22:
+Make a new table...
+
+Legend for RsG, Rdg at the bottom. 
+
+slide 23:
+
+don't dump graphs
+Rework this properly. Bring back C1 and C2. Establish why x and z is the intuitive dimensions. And THEN show how the algorithm recovers that. 
+Explain the graph...
+
+Bring image back...Explain why the intution makes sense and they see if algo gives that intution
+
+Slide 24:
+
+Recreate table. Describe what NULL points mean. 
+Slide 25:
+Anchor the steps in picture...Recreate table...
+slide 26:
+break it down: 
+limitations -> possible solution. order it that way. Be less converstaional in the bullets. 
+
+slide 27:
+Change the first line? What was developed?
+Introduce the idea....
+
+
+slide 28: 
+Add keywords to slides. 
 
