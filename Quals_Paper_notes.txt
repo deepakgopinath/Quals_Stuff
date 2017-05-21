@@ -104,18 +104,17 @@ Add an outline slide...?
 
 Divide into sections...
 Slide 1:
-citation pictures
+citation pictures - done
 
 ***
 Proper citations for pictures. 
 
 
 
-Slide 2: 
+Slide 2 - done
 
 Present the interfaces separately....Easier to hardest. Put names under the interfaces. Replace 7DOF with 6+1DOF. Indicating one for gripper. Start to consolidate the arm example. 
 
-Slide 3:
 
 Slide 4:
 Put it at the end for back up. Use some other words and not "intersection"
@@ -131,10 +130,11 @@ videos from old study...showing modal control is hard.
 
 Slide 6:
 Not needed to talk about shared autonomy explicitly a lot. 
-What is intent? Describe. 
+What is intent? Describe. in terms of the goals that the user might be going for. Anchor in pictures. 
 No wheel chair talk. remove cliparts citation
 Change robot brain picture to a "computer picture. "
 
+Illustrate heirarchical and blending based in pictures, on the space in the right. 
 
 SLide 7:
 
@@ -163,8 +163,10 @@ Present each "section" of the project separately. standard the "bold/italics" co
 Slide 10:
 
 Clear cut definition about belief. Talk about this as an alternate interprestation as a separate point. Don't make it confusing. Carefully choose words. 
+
 Ordering of functions before second point. 
-Quantifying measure systems estimate. 
+Quantifying measure systems estimate.
+ 
 Different choice of words. Maybe When the equations are shown supplement it with diagrams. 
 don';t use maximal twice. 
 

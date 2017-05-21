@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  15 MAY 2017 19:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.10.3)  21 MAY 2017 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,13 +612,13 @@ s been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 \end{equation*}
+l.291 \end{equation*}
                       <./figures/DE_NEW.png (PNG copy)>]
 <./figures/MODE_2.png, id=66, 700.86844pt x 348.55219pt>
 File: ./figures/MODE_2.png Graphic file (type png)
 
 <use ./figures/MODE_2.png>
-Package pdftex.def Info: ./figures/MODE_2.png used on input line 362.
+Package pdftex.def Info: ./figures/MODE_2.png used on input line 364.
 (pdftex.def)             Requested size: 252.0pt x 125.32445pt.
  (./deepak_rss_paper.bbl)
 
@@ -632,27 +632,27 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 635.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 637.
 [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.635 \end{document}
+l.637 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{table.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.635 \end{document}
+l.637 \end{document}
                      <./figures/MODE_2.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 635.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 637.
  (./deepak_rss_paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 635.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 635.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 637.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 637.
 Package rerunfilecheck Info: File `deepak_rss_paper.out' has not changed.
 (rerunfilecheck)             Checksum: B8EDB524F178F3395F74D64FA1FB45E0;552.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 635.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 637.
  ) 
 Here is how much of TeX's memory you used:
  8543 strings out of 495028
@@ -679,7 +679,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on deepak_rss_paper.pdf (2 pages, 204860 bytes).
+Output written on deepak_rss_paper.pdf (2 pages, 205373 bytes).
 PDF statistics:
  142 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams
